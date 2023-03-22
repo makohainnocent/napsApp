@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#004d00">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#004d00">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#004d00">
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="utf-8">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>smart brooder</title>
+    </head>
+  <body class="">
+    <div class="header ">
+      <button class="left icon ion-arrow-left-c" name="button" onclick="moveBack()"></button>
+      <h1 class="text-white"></h1>
+    </div>
+    <div class="swiper-container swiper-container-fullscreen">
+        <div class="swiper-wrapper">
+            <!-- Add slide 1 -->
+            <div class="swiper-slide vertical-align-center blue">
+              <i class="icon ion-android-hangout"></i>
+              <h1>What is Qmeet?</h1>
+              <p style="max-width: 500px;">Qmeet is software for quickly setting up and conducting online meetings</p>
+            </div>
+            <!-- Add slide 2 -->
+            <div class="swiper-slide vertical-align-center green-600">
+              <i class="icon ion-android-hangout"></i>
+              <h1>setup meeting?</h1>
+              <p style="max-width: 500px;">To setup meeting on Qmeet, goto the home page and click on the green icon with the video icon you will be redirected  to the page with the meeting code copy the meeting code and head back to the home page to join the meeting</p>
+            </div>
+            <!-- Add slide 3 -->
+            <div class="swiper-slide vertical-align-center orange">
+              <i class="icon ion-android-hangout"></i>
+              <h1>Join meeting?</h1>
+              <p style="max-width: 500px;">to join a meeting on Qmeet, make sure you have the meeting code then head over to the home page and click on the orange button then enter the meeting code to join the meeting</p>
+            </div>
+  
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+    </div>
+  </body>
+  <script type="text/javascript"  src="js/index.js"></script>
+    <script type="text/javascript"  src="mobileui/mobileui.js"></script>
+    <script type="text/javascript">
+      new Swiper('.swiper-container', {
+          pagination: '.swiper-pagination',
+          paginationClickable: true
+      });
+    </script>
+</html>

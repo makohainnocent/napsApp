@@ -1,0 +1,85 @@
+﻿<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="./jquery.datetimepicker.css"/>
+    <!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#004d00">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#004d00">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#004d00">
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="utf-8">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>smart brooder</title>
+    </head>
+    <style type="text/css">
+
+      .custom-date-style {
+        background-color: red !important;
+      }
+      
+      .input{	
+      }
+      .input-wide{
+        width: 500px;
+      }
+      
+      </style>
+  <body class="has-header">
+    <div class="header blue-grey-900">
+      <button class="left icon ion-arrow-left-c" name="button" onclick="moveBack()"></button>
+      <h1 class="text-white">Patient information</h1>
+    </div>
+    
+    <div class="row-center cover blend-soft-light blue-grey-900" style="background-image:url('img/back2.jpg');height:100%">
+      <div class="horizontal-align-center vertical-align-center">
+        <p>
+        
+        </p>
+      <div class="space"></div>
+     
+      <div class="list no-border opacity-60" id="patientForm">
+          <div class="item icon ion-checkmark border-green border-bottom">
+              <input type="text" id="Name" placeholder="name" />
+          </div>
+          <div class="item icon ion-checkmark border-blue border-bottom">
+
+              <input type="text" value="" id="Height" placeholder="height" /><br><br>
+          </div>
+          <div class="item icon ion-checkmark border-blue border-bottom">
+
+              <input type="text" value="" id="Weight" placeholder="weight" /><br><br>
+          </div>
+          <div class="item icon ion-checkmark border-blue border-bottom">
+
+              <input type="text" value="" id="Address" placeholder="address" /><br><br>
+          </div>
+          <div class="item icon ion-checkmark border-blue border-bottom">
+
+              <input type="text" value="" id="Phone" placeholder="phone" /><br><br>
+          </div>
+          <div class="item icon ion-checkmark border-blue border-bottom">
+
+              <input type="text" value="" id="NextOfKin" placeholder="next of kin" /><br><br>
+          </div>
+      </div>
+      <div class="space"></div>
+      <button class="blue full radius" onclick="patientInfo()">Continue</button>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript"  src="js/index.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript"  src="mobileui/mobileui.js"></script>
+    <script src="./jquery.js"></script>
+    <script src="./php-date-formatter.min.js"></script>
+<script src="./jquery.mousewheel.js"></script>
+<script src="jquery.datetimepicker.js"></script>
+    <script type="text/javascript">
+
+    </script>
+</html>

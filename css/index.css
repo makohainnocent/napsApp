@@ -1,0 +1,28 @@
+.q-font {
+    font-family: 'Chewy', cursive;
+    font-size: 45px;
+    line-height: 24px;
+  }
+
+
+.ButtonMenu{
+    margin-left: 5px ;
+    position: absolute;
+}
+
+.ButtonMenu  button{
+    margin: 5px;
+}
+
+.meeting-code{
+    font-weight: 700;
+}
+
+.main-box{
+    height: 100%  !important;
+}
+
+.head-box{
+    min-height:auto;
+    padding:10px;
+}

@@ -1,0 +1,63 @@
+﻿<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#004d00">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#004d00">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#004d00">
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="utf-8">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>maps</title>
+    </head>
+    
+  <body class="has-header">
+    <button class="green circle icon ion-android-more-horizontal shadow float-bottom-right" onclick="openPopover('popover1')" style="margin-bottom: 50px;"></button>
+    <div class="popover" id="popover1">
+      <div class="list">
+        <div class="item" onclick="viewDoctorAppointments()"><h1>view appointments</h1></div>
+        <div class="item" onclick="createAppointment()"><h1>make appointment</h1></div>
+      </div>
+    </div>
+    <div class="header blue-grey-900">
+      <button class="left icon ion-arrow-left-c" name="button" onclick="moveBack()"></button>
+      <h1 class="text-white">Doctors</h1>
+    </div>
+    
+    <div class=" cover blend-soft-light blue-grey-900" style="background-image:url('img/back2.jpg');height:100%">
+      <div class="content">
+        
+        <div class="list no-border" id="doctorsArea">
+            <div style="display:none;" id="doctorsTemplate">
+                <div class="item">
+                    <div class="left">
+                        <img class="avatar circle" src="img/avater.png">
+                    </div>
+                    <h2>%name</h2>
+                    <p class="text-grey">%specialisation</p>
+                    <div class="right">
+                        <small class="text-teal">
+                            <input type="radio" name="doctor" class="teal" value="%id">
+                        </small>
+                    </div>
+                </div>
+            </div>
+          
+         
+          
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript"  src="js/index.js"></script>
+    <script type="text/javascript"  src="mobileui/mobileui.js"></script>
+    <script type="text/javascript"  src="js/data.js"></script>
+    <script type="text/javascript">
+     loadDoctors()
+    </script>
+</html>

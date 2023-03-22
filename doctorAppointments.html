@@ -1,0 +1,64 @@
+﻿<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#004d00">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#004d00">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#004d00">
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="utf-8">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>maps</title>
+    </head>
+    
+  <body class="has-header">
+    
+    <div class="header blue-grey-900">
+      <button class="left icon ion-arrow-left-c" name="button" onclick="moveBack()"></button>
+      <h1 class="text-white" id="title">Doctors Appointments</h1>
+    </div>
+    
+    <div class=" cover blend-soft-light blue-grey-900" style="background-image:url('img/back2.jpg');height:100%">
+      <div class="content">
+        <div class="timeline " id="appointmentsArea">
+            <div style="display:none;" id="appointmentsTemplate">
+                <div class="row">
+                    <div class="col-10 align-center marker">
+                        <div class="icon-circle-small text-white cyan-700">
+                            <i class="icon ion-calendar"></i>
+                        </div>
+                    </div>
+                    <div class="col shadow radius margin white-opacity-10">
+                        <div class="margin">
+                            <h2><span class="text-bold">%from</span>-<span class="text-bold">%to</span></h2>
+                            <h2><strong>%name</strong></h2>
+                            <p class="text-grey">%phone</p>
+                            <p class="text-green">%reason</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+
+          
+
+
+          </div>
+          <div class="space-huge"></div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript"  src="js/index.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript"  src="mobileui/mobileui.js"></script>
+    <script type="text/javascript">
+        loadDoctorDetails()
+        loadDoctorAppointments()
+    </script>
+</html>

@@ -1,0 +1,232 @@
+﻿<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="mobileui/style.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="./jquery.datetimepicker.css"/>
+    <!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#004d00">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#004d00">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#004d00">
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="utf-8">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>maps</title>
+    </head>
+    <style type="text/css">
+
+      .custom-date-style {
+        background-color: red !important;
+      }
+      
+      .input{	
+      }
+      .input-wide{
+        width: 500px;
+      }
+      
+      </style>
+  <body class="has-header">
+    <div class="header blue-grey-900">
+      <button class="left icon ion-arrow-left-c" name="button" onclick="moveBack()"></button>
+      <h1 class="text-white">Appointment</h1>
+    </div>
+    
+    <div class="row-center cover blend-soft-light blue-grey-900" style="background-image:url('img/back2.jpg');height:100%">
+      <div class="horizontal-align-center vertical-align-center">
+        <p>
+        
+        </p>
+      <div class="space"></div>
+     
+      <div class="list no-border opacity-60">
+          <div class="item icon ion-clock border-green border-bottom">
+              <input type="text" id="datetimepicker0" />
+          </div>
+          <div class="item icon ion-clock border-blue border-bottom">
+
+              <input type="text" value="" id="datetimepicker" /><br><br>
+          </div>
+          <div class="item icon ion-checkmark border-blue border-bottom">
+
+              <input type="text" value="" id="Reason"  placeholder="reason"/><br><br>
+          </div>
+          <div class="item icon ion-checkmark border-blue border-bottom">
+
+              <input type="text" value="" id="venue"  placeholder="venue"/><br><br>
+          </div>
+
+
+      </div>
+      <div class="space"></div>
+      <button class="blue full radius" onclick="newAppointment()">Finish</button>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript"  src="js/index.js"></script>
+  <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript"  src="mobileui/mobileui.js"></script>
+    <script src="./jquery.js"></script>
+    <script src="./php-date-formatter.min.js"></script>
+<script src="./jquery.mousewheel.js"></script>
+<script src="jquery.datetimepicker.js"></script>
+    <script type="text/javascript">
+      $.datetimepicker.setLocale('en');
+
+$('#datetimepicker_format').datetimepicker({value:'2015/04/15 05:03', format: $("#datetimepicker_format_value").val()});
+console.log($('#datetimepicker_format').datetimepicker('getValue'));
+
+$("#datetimepicker_format_change").on("click", function(e){
+	$("#datetimepicker_format").data('xdsoft_datetimepicker').setOptions({format: $("#datetimepicker_format_value").val()});
+});
+$("#datetimepicker_format_locale").on("change", function(e){
+	$.datetimepicker.setLocale($(e.currentTarget).val());
+});
+
+$('#datetimepicker').datetimepicker({
+dayOfWeekStart : 1,
+lang:'en',
+disabledDates:['1986/01/08','1986/01/09','1986/01/10'],
+startDate:	'1986/01/05'
+});
+$('#datetimepicker').datetimepicker({value:'2015/04/15 05:03', step:10});
+
+$('.some_class').datetimepicker();
+
+$('#default_datetimepicker').datetimepicker({
+	formatTime:'H:i',
+	formatDate:'d.m.Y',
+	//defaultDate:'8.12.1986', // it's my birthday
+	defaultDate:'+03.01.1970', // it's my birthday
+	defaultTime:'10:00',
+	timepickerScrollbar:false
+});
+
+
+$('#datetimepicker0').datetimepicker({
+dayOfWeekStart : 1,
+lang:'en',
+disabledDates:['1986/01/08','1986/01/09','1986/01/10'],
+startDate:	'1986/01/05'
+});
+$('#datetimepicker0').datetimepicker({value:'2015/04/15 05:03', step:10});
+
+$('.some_class').datetimepicker();
+
+$('#default_datetimepicker').datetimepicker({
+	formatTime:'H:i',
+	formatDate:'d.m.Y',
+	//defaultDate:'8.12.1986', // it's my birthday
+	defaultDate:'+03.01.1970', // it's my birthday
+	defaultTime:'10:00',
+	timepickerScrollbar:false
+});
+
+
+$('#datetimepicker10').datetimepicker({
+	step:5,
+	inline:true
+});
+$('#datetimepicker_mask').datetimepicker({
+	mask:'9999/19/39 29:59'
+});
+
+$('#datetimepicker1').datetimepicker({
+	datepicker:false,
+	format:'H:i',
+	step:5
+});
+$('#datetimepicker2').datetimepicker({
+	yearOffset:222,
+	lang:'ch',
+	timepicker:false,
+	format:'d/m/Y',
+	formatDate:'Y/m/d',
+	minDate:'-1970/01/02', // yesterday is minimum date
+	maxDate:'+1970/01/02' // and tommorow is maximum date calendar
+});
+$('#datetimepicker3').datetimepicker({
+	inline:true
+});
+$('#datetimepicker4').datetimepicker();
+$('#open').click(function(){
+	$('#datetimepicker4').datetimepicker('show');
+});
+$('#close').click(function(){
+	$('#datetimepicker4').datetimepicker('hide');
+});
+$('#reset').click(function(){
+	$('#datetimepicker4').datetimepicker('reset');
+});
+$('#datetimepicker5').datetimepicker({
+	datepicker:false,
+	allowTimes:['12:00','13:00','15:00','17:00','17:05','17:20','19:00','20:00'],
+	step:5
+});
+$('#datetimepicker6').datetimepicker();
+$('#destroy').click(function(){
+	if( $('#datetimepicker6').data('xdsoft_datetimepicker') ){
+		$('#datetimepicker6').datetimepicker('destroy');
+		this.value = 'create';
+	}else{
+		$('#datetimepicker6').datetimepicker();
+		this.value = 'destroy';
+	}
+});
+var logic = function( currentDateTime ){
+	if (currentDateTime && currentDateTime.getDay() == 6){
+		this.setOptions({
+			minTime:'11:00'
+		});
+	}else
+		this.setOptions({
+			minTime:'8:00'
+		});
+};
+$('#datetimepicker7').datetimepicker({
+	onChangeDateTime:logic,
+	onShow:logic
+});
+$('#datetimepicker8').datetimepicker({
+	onGenerate:function( ct ){
+		$(this).find('.xdsoft_date')
+			.toggleClass('xdsoft_disabled');
+	},
+	minDate:'-1970/01/2',
+	maxDate:'+1970/01/2',
+	timepicker:false
+});
+$('#datetimepicker9').datetimepicker({
+	onGenerate:function( ct ){
+		$(this).find('.xdsoft_date.xdsoft_weekend')
+			.addClass('xdsoft_disabled');
+	},
+	weekends:['01.01.2014','02.01.2014','03.01.2014','04.01.2014','05.01.2014','06.01.2014'],
+	timepicker:false
+});
+var dateToDisable = new Date();
+	dateToDisable.setDate(dateToDisable.getDate() + 2);
+$('#datetimepicker11').datetimepicker({
+	beforeShowDay: function(date) {
+		if (date.getMonth() == dateToDisable.getMonth() && date.getDate() == dateToDisable.getDate()) {
+			return [false, ""]
+		}
+
+		return [true, ""];
+	}
+});
+$('#datetimepicker12').datetimepicker({
+	beforeShowDay: function(date) {
+		if (date.getMonth() == dateToDisable.getMonth() && date.getDate() == dateToDisable.getDate()) {
+			return [true, "custom-date-style"];
+		}
+
+		return [true, ""];
+	}
+});
+$('#datetimepicker_dark').datetimepicker({theme:'dark'})
+    </script>
+</html>
